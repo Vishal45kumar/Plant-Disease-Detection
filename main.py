@@ -25,6 +25,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 #Tensorflow model prediction
+model = tf.keras.models.load_model('trained_model_plant.keras')
 def model_prediction(test_image):
     model = tf.keras.models.load_model('trained_model_plant.keras')
     image = tf.keras.preprocessing.image.load_img(test_image,target_size=(128,128))
